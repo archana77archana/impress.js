@@ -19,15 +19,13 @@
 /*jshint bitwise:true, curly:true, eqeqeq:true, forin:true, latedef:true, newcap:true,
          noarg:true, noempty:true, undef:true, strict:true, browser:true */
 
-// You are one of those who like to know how things work inside?
-// Let me show you the cogs that make impress.js run...
+/*Now we are going to try out what is this all about*/
+
 (function ( document, window ) {
     'use strict';
     
     // HELPER FUNCTIONS
     
-    // `pfx` is a function that takes a standard CSS property name as a parameter
-    // and returns it's prefixed version valid for current browser it runs in.
     // The code is heavily inspired by Modernizr http://www.modernizr.com/
     var pfx = (function () {
         
@@ -90,15 +88,13 @@
         return document.getElementById(id);
     };
     
-    // `$` returns first element for given CSS `selector` in the `context` of
-    // the given element or whole document.
+
     var $ = function ( selector, context ) {
         context = context || document;
         return context.querySelector(selector);
     };
     
-    // `$$` return an array of elements for given CSS `selector` in the `context` of
-    // the given element or whole document.
+
     var $$ = function ( selector, context ) {
         context = context || document;
         return arrayify( context.querySelectorAll(selector) );
